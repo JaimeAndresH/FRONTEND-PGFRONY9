@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatalogoPlus | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand__logo">▣</span>
+        <span class="brand__text">CatálogoPlus</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <a class="nav-link nav-link--active" href="index.html">Inicio</a>
+        <a class="nav-link" href="servicios.html">Servicios</a>
+        <a class="nav-link" href="favoritos.html">Favoritos</a>
+        <a class="nav-link" href="contacto.html">Contacto</a>
+        <a class="nav-link" href="administrar.html">Administrar</a>
+      </nav>  
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__content">
+        <div class="hero__text">
+          <span class="eyebrow">Servicios digitales para crecer</span>
+          <h1>Descubre los mejores servicios para tu negocio</h1>
+          <p>Explora nuestro catálogo de servicios educativos, tecnológicos y comerciales diseñados para impulsar tu crecimiento con una experiencia moderna y práctica.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#destacados">Explorar servicios</a>
+            <a class="button button--ghost" href="contacto.html">Solicitar asesoría</a>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <p class="hero__card-label">Servicio destacado</p>
+          <h2>Transformación digital a tu medida</h2>
+          <p>Conecta capacitación, innovación y acompañamiento estratégico en un solo lugar.</p>
+          <ul class="hero__list">
+            <li>Catálogo dinámico desde JSON local</li>
+            <li>Favoritos guardados con localStorage</li>
+            <li>Diseño responsive listo para entrega</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats__grid">
+        <article class="stat-card"><span class="stat-card__icon">◎</span><strong>500+</strong><p>Clientes satisfechos</p></article>
+        <article class="stat-card"><span class="stat-card__icon">★</span><strong>4.9/5</strong><p>Calificación promedio</p></article>
+        <article class="stat-card"><span class="stat-card__icon">⌘</span><strong>15+</strong><p>Años de experiencia</p></article>
+        <article class="stat-card"><span class="stat-card__icon">✦</span><strong>100%</strong><p>Garantía de calidad</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="destacados">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-heading__tag">Selección principal</span>
+          <h2>Servicios destacados</h2>
+          <p>Descubre nuestros servicios más populares y mejor valorados.</p>
+        </div>
+        <div class="cards-grid" id="featured-services" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section--muted">
+      <div class="container info-layout">
+        <article class="info-card">
+          <span class="section-heading__tag">Por qué elegirnos</span>
+          <h2>Una plataforma clara, visual y funcional</h2>
+          <p>El home está pensado para presentar el catálogo de manera atractiva, con acceso rápido a navegación, servicios clave, acciones de contacto y favoritos.</p>
+          <div class="info-card__items">
+            <div><strong>Diseño intuitivo</strong><p>Jerarquía visual clara para explorar servicios sin fricción.</p></div>
+            <div><strong>Datos dinámicos</strong><p>Las tarjetas se renderizan desde un archivo JSON local.</p></div>
+            <div><strong>Base escalable</strong><p>Lista para conectar el detalle, formulario y CRUD básico.</p></div>
+          </div>
+        </article>
+
+        <aside class="testimonial-panel">
+          <span class="testimonial-panel__tag">Testimonios</span>
+          <blockquote>“Encontramos soluciones tecnológicas y educativas en un solo lugar. La experiencia fue simple, rápida y muy visual.”</blockquote>
+          <p class="testimonial-panel__author">Laura Méndez, Coordinadora de Innovación</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta-banner">
+        <div>
+          <span class="section-heading__tag">¿Listo para continuar?</span>
+          <h2>Explora el catálogo completo o contáctanos hoy</h2>
+          <p>Da el siguiente paso y transforma tu idea en una experiencia digital destacada.</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a class="button button--primary" href="servicios.html">Ver servicios</a>
+          <a class="button button--secondary" href="contacto.html">Ir a contacto</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand--footer" href="index.html"><span class="brand__logo">▣</span><span class="brand__text">CatálogoPlus</span></a>
+        <p>Plataforma de servicios digitales, educativos, tecnológicos y comerciales.</p>
+      </div>
+      <div>
+        <h3>Enlaces</h3>
+        <ul class="footer-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="favoritos.html">Favoritos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul class="footer-list">
+          <li>Bogotá, Colombia</li>
+          <li>contacto@catalogoplus.com</li>
+          <li>+57 300 000 0000</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "edu-digital",
+    "name": "Educacion Digital",
+    "description": "Cursos y talleres de formacion tecnologica para fortalecer habilidades digitales y aprendizaje practico.",
+    "category": "Educativo",
+    "mode": "Virtual",
+    "price": "Desde $120.000",
+    "badge": "Destacado",
+    "featured": true,
+    "image": "assets/img/service-education.svg"
+  },
+  {
+    "id": "colab-empresarial",
+    "name": "Colaboracion Empresarial",
+    "description": "Soluciones de trabajo en equipo para empresas modernas con asesoria, procesos y herramientas colaborativas.",
+    "category": "Comercial",
+    "mode": "Hibrido",
+    "price": "Desde $180.000",
+    "badge": "Popular",
+    "featured": true,
+    "image": "assets/img/service-collaboration.svg"
+  },
+  {
+    "id": "innovacion-tech",
+    "name": "Innovacion Tecnologica",
+    "description": "Consultoria en transformacion digital para mejorar operaciones, experiencia del usuario y eficiencia.",
+    "category": "Tecnologico",
+    "mode": "Presencial",
+    "price": "Desde $250.000",
+    "badge": "Destacado",
+    "featured": true,
+    "image": "assets/img/service-innovation.svg"
+  },
+  {
+    "id": "turismo-inteligente",
+    "name": "Turismo Inteligente",
+    "description": "Experiencias turisticas apoyadas en tecnologia, rutas personalizadas y acompanamiento digital.",
+    "category": "Turistico",
+    "mode": "Experiencial",
+    "price": "Desde $210.000",
+    "badge": "Nuevo",
+    "featured": false,
+    "image": "assets/img/service-tourism.svg"
+  }
+]

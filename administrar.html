@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatalogoPlus | Administrar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="administrar">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html"><span class="brand__logo">▣</span><span class="brand__text">CatálogoPlus</span></a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" data-nav-toggle><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="servicios.html">Servicios</a>
+        <a class="nav-link" href="favoritos.html">Favoritos</a>
+        <a class="nav-link" href="contacto.html">Contacto</a>
+        <a class="nav-link nav-link--active" href="administrar.html">Administrar</a>
+      </nav>
+    </div>
+  </header>
+  <main class="inner-page">
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-heading__tag">Mini CRUD</span>
+        <h1>Gestión básica de servicios</h1>
+        <p>Administra servicios personalizados desde una interfaz clara, con persistencia local y validaciones básicas.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container admin-layout">
+        <section class="admin-panel">
+          <div class="admin-panel__header">
+            <span class="section-heading__tag">Nuevo servicio</span>
+            <h2>Registrar servicio en el catálogo</h2>
+            <p>Completa la información principal para agregar un nuevo servicio a la vista local.</p>
+          </div>
+
+          <form class="admin-form" id="admin-form" novalidate>
+            <div class="form-group">
+              <label for="admin-name">Nombre del servicio</label>
+              <input id="admin-name" name="admin-name" type="text" required>
+              <small class="error-message"></small>
+            </div>
+
+            <div class="admin-form__grid">
+              <div class="form-group">
+                <label for="admin-category">Categoría</label>
+                <select id="admin-category" name="admin-category" required>
+                  <option value="">Selecciona una categoría</option>
+                  <option value="Educativo">Educativo</option>
+                  <option value="Tecnologico">Tecnológico</option>
+                  <option value="Turistico">Turístico</option>
+                  <option value="Comercial">Comercial</option>
+                </select>
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="admin-mode">Modalidad</label>
+                <select id="admin-mode" name="admin-mode" required>
+                  <option value="">Selecciona una modalidad</option>
+                  <option value="Virtual">Virtual</option>
+                  <option value="Presencial">Presencial</option>
+                  <option value="Hibrido">Híbrido</option>
+                  <option value="Experiencial">Experiencial</option>
+                </select>
+                <small class="error-message"></small>
+              </div>
+            </div>
+
+            <div class="admin-form__grid">
+              <div class="form-group">
+                <label for="admin-price">Precio o tarifa</label>
+                <input id="admin-price" name="admin-price" type="text" placeholder="Desde $200.000" required>
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="admin-badge">Etiqueta</label>
+                <select id="admin-badge" name="admin-badge" required>
+                  <option value="">Selecciona una etiqueta</option>
+                  <option value="Nuevo">Nuevo</option>
+                  <option value="Popular">Popular</option>
+                  <option value="Destacado">Destacado</option>
+                </select>
+                <small class="error-message"></small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="admin-description">Descripción corta</label>
+              <textarea id="admin-description" name="admin-description" rows="4" required></textarea>
+              <small class="error-message"></small>
+            </div>
+
+            <label class="check-field" for="admin-featured">
+              <input id="admin-featured" name="admin-featured" type="checkbox">
+              <span>Marcar como servicio destacado</span>
+            </label>
+
+            <div class="admin-form__actions">
+              <button class="button button--primary" type="submit">Agregar servicio</button>
+              <button class="button button--secondary" id="reset-admin-form" type="button">Limpiar formulario</button>
+            </div>
+
+            <p class="form-success" id="admin-success" hidden>Servicio agregado correctamente al catálogo local.</p>
+          </form>
+        </section>
+
+        <section class="admin-list">
+          <div class="admin-summary">
+            <div>
+              <span class="section-heading__tag">Resumen</span>
+              <h2>Servicios creados</h2>
+              <p id="admin-message">Aquí verás los servicios personalizados creados en esta sección.</p>
+            </div>
+            <div class="admin-summary__stats">
+              <strong id="admin-count">0</strong>
+              <span>servicios registrados</span>
+            </div>
+          </div>
+
+          <div class="admin-list__actions">
+            <a class="button button--secondary" href="servicios.html">Ver catálogo</a>
+            <button class="button button--secondary" id="clear-admin-services" type="button">Eliminar todos</button>
+          </div>
+
+          <div id="admin-services"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand brand--footer" href="index.html"><span class="brand__logo">▣</span><span class="brand__text">CatálogoPlus</span></a><p>Base funcional para la administración inicial del catálogo.</p></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>

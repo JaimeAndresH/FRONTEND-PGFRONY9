@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatalogoPlus | Favoritos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="favoritos">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html"><span class="brand__logo">▣</span><span class="brand__text">CatálogoPlus</span></a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" data-nav-toggle><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav>
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="servicios.html">Servicios</a>
+        <a class="nav-link nav-link--active" href="favoritos.html">Favoritos</a>
+        <a class="nav-link" href="contacto.html">Contacto</a>
+        <a class="nav-link" href="administrar.html">Administrar</a>
+      </nav>
+    </div>
+  </header>
+  <main class="inner-page">
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-heading__tag">Mi lista</span>
+        <h1>Servicios favoritos</h1>
+        <p>Guarda los servicios que más te interesan y consúltalos rápidamente cuando quieras.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container favorites-layout">
+        <aside class="favorites-summary">
+          <span class="section-heading__tag">Resumen</span>
+          <h2>Tu selección personal</h2>
+          <p>Esta sección usa <code>localStorage</code> para conservar los servicios marcados como favoritos.</p>
+          <div class="favorites-summary__count">
+            <strong id="favorites-count">0</strong>
+            <span>servicios guardados</span>
+          </div>
+          <div class="favorites-summary__actions">
+            <a class="button button--primary" href="servicios.html">Seguir explorando</a>
+            <button class="button button--secondary" id="clear-favorites" type="button">Vaciar favoritos</button>
+          </div>
+        </aside>
+
+        <div class="favorites-content">
+          <div class="favorites-toolbar">
+            <p id="favorites-message">Aquí verás los servicios que marques con el corazón.</p>
+          </div>
+          <div class="cards-grid" id="favorite-services" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand brand--footer" href="index.html"><span class="brand__logo">▣</span><span class="brand__text">CatálogoPlus</span></a><p>Gestiona tu selección personalizada de servicios.</p></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>
